@@ -34,11 +34,13 @@
 }
 
 #top {
+  transform: translateY(130px);
 }
 #watch {
 }
 
 #bottom {
+  transform: translateY(-90px);
 }
 
 @keyframes App-logo-spin {
