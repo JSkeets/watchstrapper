@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import speedmaster from "./Speedmaster.jpeg";
+// import speedmaster from "./Speedmaster.jpeg";
 import watchTop from "./watchstraptop.jpg";
 import watchBottom from "./WatchStrapLong.jpg";
 import watchTop2 from "./watch2Top.jpg";
 import watchBottom2 from "./strap2bottom.jpg";
 import "./App.css";
+import panerai from "./Panerai.png";
+import seikopresage from "./sekiopresage.png";
 
 class App extends Component {
   constructor() {
@@ -56,10 +58,12 @@ class App extends Component {
     let watches = [
       "https://cdn.shopify.com/s/files/1/0146/0732/files/GALLET.png?4139486667208975691",
       "https://cdn.shopify.com/s/files/1/0146/0732/files/PORTUGEUSE.png?4139486667208975691",
-      "https://cdn.shopify.com/s/files/1/0146/0732/files/SUB.png?4139486667208975691"
+      "https://cdn.shopify.com/s/files/1/0146/0732/files/SUB.png?4139486667208975691",
+      panerai,
+      seikopresage
     ];
     let position = this.state.watchPosition;
-    if (position < 2) {
+    if (position < 4) {
       this.setState({
         watch: watches[position + 1],
         watchPosition: position + 1
@@ -76,7 +80,7 @@ class App extends Component {
       <div className="App">
         <button onClick={this.swapImages}>Swap straps</button>
         <button onClick={this.swapWatches}>Swap wathes</button>
-        <div class="watch-container">
+        <div className="watch-container">
           <div id="top">
             {/* <img src={this.state.top} className="watchStrap" /> */}
             <img src={this.state.strapTop} className="watchStrap" />
